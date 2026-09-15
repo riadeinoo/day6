@@ -15,10 +15,9 @@
 // 1. Identifie les données nécessaires.
 // 2. Écris ta solution sous cette ligne.
 // TODO: écris ta solution ici.
-let utilisateur = {
-    nom: "riad",
+let tab = {
+    namee: "Riad",
     age: 19,
-    estAdmin: true
-};
-
-console.log(Object.values(utilisateur))
+    city: "fes"
+}
+console.log(Object.values(tab)  )

@@ -21,3 +21,43 @@
 
 // Découpe d'abord le problème en petites étapes.
 // TODO: écris ta solution ici.
+let utilisateur = []
+let id = 0
+
+function ajouterUtilisateur(noms, email){
+    let user = {
+        id: "ID-" + id,
+        nom: noms,
+        email: email
+    };
+    utilisateur.push(user)
+    id++
+}
+
+
+function trouverParEmail(email){
+    for (let i =0; i < utilisateur.length; i++){
+        if (utilisateur[i].email === email) {        
+            return utilisateur[i];  
+        }  
+    }
+    return null;
+}
+
+function supprimerParId(id){
+    for (let x=0; x < utilisateur.length; x++){      
+        if(utilisateur[x].id === id)
+        utilisateur.splice(x, 1)
+        return;
+    }
+}
+
+
+
+
+
+
+
+ajouterUtilisateur("farnese", "beijinglover00@gmail.com")
+
+console.log(trouverParEmail("beijinglover00@gmail.com"))

@@ -21,12 +21,13 @@ let candidats = [
 ]
 
 
-function losers(candidats){
+function loser(candidats) {
     let loser = []
-    for (let x = 0; x < candidats.length; x++){
-    if (candidats[x].score <= 10) 
-    loser.push(candidats[x])
+    for (let i =0; i < candidats.length; i++){
+        if (candidats[i].score <= 10){
+        loser.push(candidats[i])
+        }
+    }
+    return loser;
 }
-return loser
-}
-console.log(losers(candidats))
+console.log(loser(candidats))
