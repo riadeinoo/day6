@@ -21,43 +21,44 @@
 
 // Découpe d'abord le problème en petites étapes.
 // TODO: écris ta solution ici.
-let utilisateur = []
-let id = 0
-
-function ajouterUtilisateur(noms, email){
+let utilisateurs = [];
+let id = 1
+function ajouterUtilisateur(nom, email){
     let user = {
         id: "ID-" + id,
-        nom: noms,
-        email: email
-    };
-    utilisateur.push(user)
+        nom: nom,
+        email: email,
+    }
+    utilisateurs.push(user)
     id++
 }
-
-
 function trouverParEmail(email){
-    for (let i =0; i < utilisateur.length; i++){
-        if (utilisateur[i].email === email) {        
-            return utilisateur[i];  
-        }  
-    }
+    for ( let i = 0; i < utilisateurs.length; i++){
+        if (utilisateurs[i].email === email) {
+        return utilisateurs[i];
+       }     
+     }
     return null;
+    }
+function supprimerParId(id){
+    for (let x = 0; x < utilisateurs.length; x++){
+        if(utilisateurs[x].id === id){
+            utilisateurs.splice(x, 1)
+        }
+    }
 }
 
-function supprimerParId(id){
-    for (let x=0; x < utilisateur.length; x++){      
-        if(utilisateur[x].id === id)
-        utilisateur.splice(x, 1)
-        return;
+function afficherAnnuaire(){
+    for(let y = 0; y < utilisateurs.length; y++){
+        if (utilisateurs[y] !== null){
+            console.log(utilisateurs[y]);
+        }
     }
 }
 
 
 
 
-
-
-
-ajouterUtilisateur("farnese", "beijinglover00@gmail.com")
-
-console.log(trouverParEmail("beijinglover00@gmail.com"))
+ajouterUtilisateur("farnese", "beinjinglover00@gmail.com");
+ajouterUtilisateur("riadeino", "fakestriadeino@gmail.com");
+afficherAnnuaire()
