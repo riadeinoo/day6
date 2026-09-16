@@ -14,4 +14,26 @@
 
 // 1. Identifie les données nécessaires.
 // 2. Écris ta solution sous cette ligne.
-// TODO: écris ta solution ici.
+
+
+ 
+let riad = {               //objet origine
+    name:"riadeino",
+    likes: {
+        game:"all",
+        song:"all",
+        country:"all"
+    }
+}
+
+let fakeriad = {...riad}            //objet copie, liee a l'origine
+fakeriad.likes.game = "mhfu"        //change la copie et l'origine
+
+
+
+let trueclone = structuredClone(riad)          //donne un clone veritable independant non liee a l'origine
+
+
+
+console.log(fakeriad)
+console.log(riad)
