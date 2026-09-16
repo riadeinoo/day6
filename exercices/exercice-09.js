@@ -17,17 +17,18 @@
 let candidats = [
     {nom: "leo", score: 15},
     {nom: "farnese", score: 20},
-    {nom: "riad", score: 7}
+    {nom: "riad", score: 7},
+    {nom: "york", score: 5}
 ]
 
 
 function loser(candidats) {
-    let loser = []
-    for (let i =0; i < candidats.length; i++){
-        if (candidats[i].score <= 10){
-        loser.push(candidats[i])
+    let bums = [];
+    for (let x = 0; x < candidats.length; x++){
+        if (candidats[x].score <= 10){
+            bums.push(candidats[x])
         }
     }
-    return loser;
+return bums;
 }
 console.log(loser(candidats))

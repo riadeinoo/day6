@@ -16,8 +16,6 @@
 // 2. Écris ta solution sous cette ligne.
 let etudiant = { prenom: "Sara", ville: "Rabat", note: 16 }
 
-let prenom = etudiant.prenom;
-let ville = etudiant.ville;
-
+let {prenom, ville} = etudiant
 console.log(prenom)
 console.log(ville)

@@ -14,4 +14,17 @@
 
 // 1. Identifie les données nécessaires.
 // 2. Écris ta solution sous cette ligne.
-// TODO: écris ta solution ici.
+let chaine = "abracadabra"
+let count = {}
+function compte(chaine){
+    for(let lettre of chaine){
+        if (count[lettre]){
+            count[lettre] += 1
+        } else {
+            count[lettre] = 1
+    }
+    
+}
+return count
+}
+console.log(compte(chaine))

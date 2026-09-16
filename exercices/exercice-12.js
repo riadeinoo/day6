@@ -16,10 +16,11 @@
 // 2. Écris ta solution sous cette ligne.
 let compteBancaire = {
     solde: 100,
-    deposer: function (montant){
+    deposer:function deposer(montant){
         this.solde += montant
     }
 }
+
 console.log(compteBancaire.solde)
 compteBancaire.deposer(50)
 console.log(compteBancaire.solde)
